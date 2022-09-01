@@ -17,9 +17,9 @@
 
 # GitHub Actions Workflow
 
-Where are the actions?
+## Where are the actions?
 
-```yaml
+```yaml [1-38|7-8|9-13|16-19|7-8,9-13,16-19]
 name: 'Link Checker: All English'
 on: push
 jobs:
@@ -58,28 +58,6 @@ jobs:
             --verbose \
             --check-images \
             --level critical
-```
-
-##--##
-
-<!-- .slide: class="with-code" -->
-
-# GitHub Actions Workflow
-
-Here
-
-```yaml
-      - name: Checkout
-        uses: actions/checkout@v3
-      - name: Setup node
-        uses: actions/setup-node@v3
-        with:
-          node-version: 16.13.x
-          cache: npm
-      - name: Gather files changed
-        uses: trilom/file-changes-action@a6ca26c14274c33b15e6499323aac178af06ad4b
-        with:
-          fileOutput: 'json'
 ```
 
 ##--##
